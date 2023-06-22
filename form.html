@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máquina de Grãos</title>
+    <link rel="stylesheet" href="estilo/form.css">
+</head>
+<body>
+    <h1>A Máquina de Grãos do Starbuzz</h1>
+    <h2>Complete o formulário a seguir e clique em "Faça seu Pedido"</h2>
+
+    <form action="http://www.starbuzzcoffe.com/processorder.php" method="POST">
+        <h3>
+            Escolha seus grãos:
+            <select name="beans">
+                <!-- altera o name do select para "thembeams" -->
+                <option value="House Blend">Mistura da Casa</option>
+                <option value="Bolivia">Bolívia Suprema Cultivada na Sombra</option>
+                <option value="Guatemala">Guatemala Orgânico</option>
+                <option value="Kenia">Quênia</option>
+            </select>
+        </h3>
+        
+        <p>
+            <label >
+                <input type="radio" name="tipograo" value="inteiro">
+                Grão Inteiro
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="radio" name="tipograo" value="moido" checked>
+                Moído
+            </label>
+        </p>
+
+        <h3>Extras</h3>
+
+        <p>
+            <label>
+                <input type="checkbox" name="extras" value="embalagem">
+                Embalagem para presente
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type="checkbox" name="extras" value="calogo" checked>
+                Incluir catálogo no pedido
+            </label>
+        </p>
+
+        <fieldset>
+            <legend>Enviar para:</legend>
+    
+            <p>
+                Nome:
+                <input type="text" name="name">
+            </p>
+            <p>
+                Endereço:
+                <input type="text" name="endereco" value="adress">
+            </p>
+            <p>
+                Cidade:
+                <input type="text" name="cidade" value="city">
+            </p>
+            <p>
+                Estado:
+                <input type="text" name="estado" value="state">
+            </p>
+            <p>
+                CEP:
+                <input type="text" name="cep" value="zip">
+            </p>
+        </fieldset>
+
+        <p>
+            <legend>
+                Comentários do cliente:
+            </legend>
+            <textarea name="comentarios" id="" cols="48" rows="10"></textarea>
+        </p>
+
+        <input type="submit" value="Pedir">
+
+    </form>
+</body>
+</html>
